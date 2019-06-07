@@ -1,5 +1,17 @@
 import React, { Component } from 'react';
 import './App.css';
+import {connect} from 'react-redux'
+
+const mapStatetoProps = state => {
+  return {
+    smurfName: state.name,
+    smurfAge: state.age,
+    smurfHeight: state.height,
+    smurfId: state.id
+
+  }
+}
+export default connect(mapStatetoProps,{})(smurfList)
 /*
  to wire this component up you're going to need a few things.
  I'll let you do this part on your own. 
